@@ -1,0 +1,31 @@
+# .github/workflows/ai-patch-approval.yml
+on:
+  pull_request:
+    branches: [main]
+jobs:
+  ai_generate_patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # Use your AI agent or containerized agent
+      - name: Run AI Agent
+        run: python generate_patch.py  # or invoke your agent
+      - name: Commit and Push Patch
+        run: git commit -am "AI patch" && git push
+
+  approval:
+    needs: ai_generate_patch
+    runs-on: ubuntu-latest
+    steps:
+      - uses: trstringer/manual-approval@v1
+        with:
+          secret: ${{ secrets.GITHUB_TOKEN }}
+          approvers: your-username
+          issue-title: "Approve AI Patch"
+          issue-body: "Please approve the changes."
+
+  cross_repo_build:
+    needs: approval
+    uses: <org>/<central-build-workflow>/.github/workflows/build-chain.yml@main
+    with:
+      definition-file: https://path/to/your/definition.yaml

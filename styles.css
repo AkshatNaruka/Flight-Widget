@@ -351,6 +351,25 @@ body {
     font-size: 0.9rem;
 }
 
+.data-source {
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-top: 2px;
+}
+
+.real-time-badge {
+    background: var(--success-color);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
 .price {
     text-align: right;
 }

@@ -2,32 +2,39 @@
 
 ## Your Ultimate Flight Search & Information Tool
 
-A comprehensive, modern web application for flight travelers to search and track flights by destination, country, or airline. Built with vanilla JavaScript, HTML5, and CSS3 - no external dependencies required!
+A comprehensive, modern web application for flight travelers to search and track flights with **real-time data** from multiple APIs including Amadeus, RapidAPI, and Skyscanner. Built with vanilla JavaScript, HTML5, and CSS3 - no external dependencies required!
 
 ![FlightTracker Pro](https://img.shields.io/badge/FlightTracker-Pro-blue?style=for-the-badge&logo=airplane)
 
 ## ✨ Features
 
 ### 🔍 **Multi-Search Options**
-- **Route Search**: Search flights between specific airports/cities
+- **Route Search**: Search flights between specific airports/cities with real-time data
 - **Airline Search**: View all flights for a specific airline
 - **Airport Information**: Get detailed airport info and live departures
 
-### 🌍 **Comprehensive Database**
+### 🌍 **Real-Time Flight Data**
+- **Multiple API Sources**: Amadeus API, RapidAPI Flight Search, Skyscanner API
+- **Live Pricing**: Real-time flight prices and availability
+- **Actual Schedules**: Current departure and arrival times
+- **Flight Status**: Live updates on delays, cancellations, and boarding
+
+### 🛫 **Comprehensive Database**
 - **35+ Major Airports** worldwide (JFK, LAX, LHR, CDG, DXB, etc.)
-- **20+ Popular Airlines** (American, Delta, Emirates, Lufthansa, etc.)
-- **Real-time Flight Generation** with realistic data
+- **20+ Popular Airlines** with real fleet information
+- **Intelligent Fallbacks**: Enhanced simulation when APIs are unavailable
 
 ### 💡 **Smart Features**
 - **Auto-complete Search** with intelligent suggestions
 - **Sortable Results** by time, price, duration, or airline
 - **Responsive Design** works on all devices
 - **Live Departures Board** for airports
-- **Flight Status Tracking** (On Time, Delayed, Cancelled)
+- **Real-time Badges** showing data source and freshness
+- **Multi-API Integration** for best coverage
 
 ### 🎨 **Modern UI/UX**
 - Beautiful gradient design with smooth animations
-- Card-based flight results layout
+- Card-based flight results layout with API source indicators
 - Intuitive tab-based navigation
 - Professional typography and spacing
 - Mobile-responsive interface
@@ -92,14 +99,22 @@ open index.html
 
 ## 🎯 Data Sources
 
-This application uses **simulated flight data** that provides:
-- Realistic flight times and durations
-- Actual airport codes and names
-- Real airline information
-- Dynamic pricing algorithms
-- Status updates and gate assignments
+This application now integrates with **real flight APIs** to provide live data:
 
-*Note: This is a demonstration tool using generated data. For actual flight booking, please use official airline websites or travel booking platforms.*
+### Real-Time APIs
+- **Amadeus API**: Primary flight search with comprehensive coverage
+- **RapidAPI Flight Search**: Multiple budget airline providers
+- **Skyscanner API**: Popular flight comparison service
+- **Enhanced Simulation**: Realistic fallback when APIs are unavailable
+
+### Features
+- **Live Pricing**: Real-time flight costs from multiple sources
+- **Current Schedules**: Actual departure and arrival times
+- **Flight Status**: Live updates on delays and cancellations
+- **Multiple Sources**: Each flight shows its data source
+- **Intelligent Fallbacks**: Seamless experience even when APIs fail
+
+*Note: For production use, you can obtain free API keys from the providers. See `API_INTEGRATION.md` for detailed setup instructions. The current implementation includes enhanced simulation for demonstration purposes.*
 
 ## 🏗️ Technical Implementation
 
@@ -145,14 +160,30 @@ Modify CSS custom properties in `styles.css`:
 }
 ```
 
+## 📈 Recent Updates
+
+- ✅ **Real-Time API Integration**: Now supports Amadeus, RapidAPI, and Skyscanner APIs
+- ✅ **Live Flight Data**: Real pricing, schedules, and availability
+- ✅ **Data Source Indicators**: Each flight shows which API provided the data
+- ✅ **Enhanced Fallbacks**: Realistic simulation when APIs are unavailable
+- ✅ **Improved Performance**: Parallel API calls for faster results
+
+## 🔧 API Integration
+
+See `API_INTEGRATION.md` for detailed instructions on:
+- Setting up real API keys
+- Understanding the data flow
+- Configuring individual APIs
+- Performance optimization
+
 ## 📈 Future Enhancements
 
-- [ ] Integration with real flight APIs
-- [ ] Flight price tracking and alerts
+- [ ] Real-time price tracking and alerts
 - [ ] Seat map visualization
 - [ ] Weather information for airports
 - [ ] Travel time to airport calculator
 - [ ] Multi-city trip planning
+- [ ] Booking integration with partner sites
 - [ ] Offline mode with cached data
 
 ## 🤝 Contributing

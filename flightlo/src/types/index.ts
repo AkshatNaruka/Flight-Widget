@@ -23,6 +23,14 @@ export interface Airline {
   alliance?: string | null
 }
 
+// Enhanced airline for self-reliant system
+export interface SelfReliantAirline {
+  code: string
+  name: string
+  hubs: string[]
+  tier: 'legacy' | 'premium' | 'lowcost' | 'international' | 'regional'
+}
+
 // Flight types
 export interface Flight {
   id: string
